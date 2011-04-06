@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.4'
 
 # Bundle edge Rails instead:
+  gem 'rspec-rails', '2.5.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
@@ -16,6 +17,7 @@ group :test do
   gem 'rspec-rails', '2.5.0'
   gem 'rspec', '2.5.0'
   gem 'webrat'
+  gem 'spork', '0.9.0.rc4'
 end
 
 # Use unicorn as the web server
