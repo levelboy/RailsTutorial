@@ -3,6 +3,10 @@ require 'spec_helper'
 describe PagesController do
   render_views
 
+  before(:each) do
+    @generic_title = "Growing Mist | "
+  end
+
   describe "GET 'home'" do
     it "should be successful" do
       get 'home'
@@ -28,7 +32,7 @@ describe PagesController do
     it "should have correct title" do
       get 'home'
       response.should have_selector("title",
-                      :content => "Growing Mist | Home")
+                      :content => @generic_title.concat("Home"))
     end
   end
 
@@ -36,7 +40,7 @@ describe PagesController do
     it "should have correct title" do
       get 'contact'
       response.should have_selector("title",
-                      :content => "Growing Mist | Contact")
+                      :content => @generic_title.concat("Contact"))
     end
   end
 
@@ -44,7 +48,7 @@ describe PagesController do
     it "should have correct title" do
       get 'about'
       response.should have_selector("title",
-                      :content => "Growing Mist | About")
+                      :content => @generic_title.concat("About"))
     end
   end
 
@@ -59,7 +63,7 @@ describe PagesController do
     it "should have correct title" do
       get 'help'
       response.should have_selector("title",
-                      :content => "Growing Mist | Help")
+                      :content => @generic_title.concat("Help"))
     end
   end
 
