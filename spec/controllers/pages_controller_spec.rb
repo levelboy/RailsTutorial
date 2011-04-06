@@ -55,4 +55,13 @@ describe PagesController do
     end
   end
 
+  describe "help page" do
+    it "should have correct title" do
+      get 'help'
+      response.should have_selector("title",
+                      :content => "Growing Mist | Help")
+    end
+  end
+
+
 end
