@@ -66,6 +66,4 @@ describe PagesController do
                       :content => @generic_title.concat("Help"))
     end
   end
-
-
 end
